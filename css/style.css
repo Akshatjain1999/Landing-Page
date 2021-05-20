@@ -246,10 +246,12 @@ footer {
   background-size: cover;
   background-position: center;
   background-position-x: center;
-  height: 50vh;
+  padding-bottom: 2rem;
 }
 footer .container {
   padding-top: 2rem;
+  min-height: max-content;
+  /* height: 23rem; */
 }
 footer .address {
   display: block;
