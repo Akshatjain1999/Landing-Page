@@ -80,6 +80,11 @@ header {
   color: orange;
   font-weight: bolder;
 }
+.overlay .date {
+  font-size: 3.5vw;
+  font-weight: bold;
+  color: white;
+}
 .registerButton {
   margin-inline: 35%;
 }
@@ -131,10 +136,29 @@ section .heading {
 }
 .heading h1 {
   font-weight: bolder;
+  font-size: 10vw;
+}
+.heading h6 {
+  font-size: 4vw;
+  padding-top: 1vw;
+}
+section p {
+  font-size: 2.5vw;
 }
 .member-info h5 {
   color: orange;
   text-align: center;
+}
+.member img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.timing {
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* Testimony Section */
@@ -202,9 +226,12 @@ article h2 {
 .carousel .overview {
   font-style: italic;
 }
+.overview {
+  color: whitesmoke;
+}
 .carousel .overview b {
   text-transform: uppercase;
-  color: rgb(240, 62, 62);
+  color: rgb(148, 10, 10);
 }
 .carousel .carousel-control {
   width: 40px;
