@@ -54,6 +54,7 @@ body {
 header {
   display: block;
   height: 100vh;
+  background-color: #00052f;
 }
 
 .overlay {
@@ -122,6 +123,7 @@ section {
   background-color: #00052f;
 }
 section {
+  margin-top: 0;
   padding: 1rem;
 }
 section .heading {
