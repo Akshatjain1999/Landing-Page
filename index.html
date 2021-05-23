@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MahaShivRatri</title>
+    <meta
+      name="description"
+      content="MahaShivRatri is a festival where you can experience the divine. Witness the Glory on 21st April 2021"
+    />
+
+    <title>MahaShivRatri Event</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,7 +23,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="shortcut icon"
-      href="Images/clipart605427.png"
+      href="images/background/ishaFavicon.png"
       type="image/x-icon"
     />
   </head>
@@ -29,150 +34,85 @@
           autoplay
           muted
           loop
-          src="video/MSR-Website-Promo-2021.mp4"
+          src="video/backgroundVideo.mp4"
           type="video/mp4"
         ></video>
 
         <div class="overlay showcase-container">
           <h1>MahaShivRatri</h1>
           <h2>A Night With Divine</h2>
-          <h4 class="date mt-4">( 21st April 2021 )</h4>
-          <button
-            type="button"
-            class="btn btn-danger mt-3 p-3 w-auto"
-            data-bs-toggle="modal"
-            data-bs-target="#formModal"
-          >
-            Register Now
-          </button>
+          <h4 class="date mt-4"> 21st April 2021  <br> 9AM To 12PM</h4>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <div class="row justify-content-center registerButton">
+              <button
+                type="button"
+                data-modal-target="#signUpModal"
+                id="signUp"
+                class="btn btn-danger btn-lg"
+              >
+                Register Now
+              </button>
+            </div>
+          </div>
 
           <!-- Modal -->
-          <div
-            class="modal fade"
-            id="formModal"
-            tabindex="-1"
-            aria-labelledby="formModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content bg-color">
-                <div class="modal-header text-center">
-                  <h4 class="modal-title w-100 display-5">Sign Up</h4>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body mx-3">
-                  <form>
-                    <!-- 2 column grid layout with text inputs for the first and last names -->
-                    <div class="row mb-4">
-                      <div class="col">
-                        <div class="form-outline">
-                          <label class="form-label" for="form3Example1"
-                            >First name</label
-                          >
-                          <input
-                            type="text"
-                            id="form3Example1"
-                            class="form-control valida"
-                          />
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-outline">
-                          <label class="form-label" for="form3Example2"
-                            >Last name</label
-                          >
-                          <input
-                            type="text"
-                            id="form3Example2"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Email input -->
-                    <div class="form-outline mb-4">
-                      <label class="form-label" for="form3Example3"
-                        >Email address</label
-                      >
-                      <input
-                        type="email"
-                        id="form3Example3"
-                        class="form-control"
-                      />
-                    </div>
-
-                    <!-- Phone Number input -->
-                    <div class="form-outline mb-4">
-                      <label class="form-label" for="form3Example4"
-                        >Phone Number</label
-                      >
-                      <input
-                        type="tel"
-                        id="form3Example4"
-                        class="form-control"
-                      />
-                    </div>
-
-                    <!-- Submit button -->
-                    <div class="registerButton">
-                      <button type="submit" class="btn btn-danger">
-                        Register Now
-                      </button>
-                    </div>
-
-                    <!-- Register buttons -->
-                    <div class="text-center">
-                      <p>or Register with:</p>
-                      <button
-                        type="button"
-                        class="btn btn-danger btn-floating mx-1"
-                      >
-                        <i class="fab fa-facebook-f"></i>
-                      </button>
-
-                      <button
-                        type="button"
-                        class="btn btn-danger btn-floating mx-1"
-                      >
-                        <i class="fab fa-google"></i>
-                      </button>
-
-                      <button
-                        type="button"
-                        class="btn btn-danger btn-floating mx-1"
-                      >
-                        <i class="fab fa-twitter"></i>
-                      </button>
-
-                      <button
-                        type="button"
-                        class="btn btn-danger btn-floating mx-1"
-                      >
-                        <i class="fab fa-github"></i>
-                      </button>
-                    </div>
-                  </form>
-                </div>
+          <div class="signUpModal" id="signUpModal">
+            <div class="signUpModal-header">
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="signUpModal-body">
+              <div class="modalHeading bg-danger">
+                <img src="/images/mahashivratri.png" alt="mahashivratri" class="img-fluid p-2">
+              </div>
+              <br />
+              <form>
+                <input
+                  type="text"
+                  pattern="[a-zA-Z][a-zA-Z\s]{2,15}"
+                  placeholder="UserName*"
+                  id="username"
+                  required
+                />
+                <input
+                  type="text"
+                  pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  placeholder="E-mail*"
+                  id="email"
+                  required
+                />
+                <input
+                  type="text"
+                  pattern="[6789][0-9]{9}"
+                  placeholder="PhoneNumber*"
+                  id="phonenumber"
+                  required
+                />
+                <br /><br />
+                <input
+                  type="button"
+                  class="btn btn-danger"
+                  value="Register Now"
+                  onclick="userSignUp()"
+                />
+              </form>
+              <hr />
+              <div>
+                <b>OR</b><br /><br />
+                <i class="fab fa-google"></i> &emsp; &emsp;
+                <i class="fab fa-facebook-f"></i> &emsp; &emsp;
+                <i class="fab fa-twitter"></i> &emsp; &emsp;
+                <i class="fab fa-linkedin-in"></i>
               </div>
             </div>
           </div>
+          <div id="overlay"></div>
         </div>
       </div>
     </header>
 
-    <section class="container-fluid d-block">
+    <section class="container-fluid d-block eventSection">
       <div class="heading d-flex flex-row justify-content-center">
-        <h1 class="mx-3">2021</h1>
-        <h6 class="mt-1">
-          MahaShivRatri <br />
-          Events
-        </h6>
+        <h2 class="mx-3">Events For The Day</h2>
       </div>
       <p class="text-white mt-4 text-center">
         Mahashivratri is an exuberant nightlong festival with explosive
@@ -184,7 +124,7 @@
           <div class="member">
             <div class="member-img">
               <img
-                src="Images/events/sadguru.webp"
+                src="images/events/sadguru.webp"
                 class="img-fluid"
                 alt="Sadguru"
               />
@@ -198,11 +138,7 @@
         <div class="col-lg-3 col-md-6 d-flex justify-content-center">
           <div class="member">
             <div class="member-img">
-              <img
-                src="Images/events/art.webp"
-                class="img-fluid"
-                alt="Sadguru"
-              />
+              <img src="images/events/art.webp" class="img-fluid" alt="Art" />
             </div>
             <div class="member-info">
               <h5>Traditional and Martial Arts performances</h5>
@@ -214,9 +150,9 @@
           <div class="member">
             <div class="member-img">
               <img
-                src="Images/events/music.webp"
+                src="images/events/music.webp"
                 class="img-fluid"
-                alt="Sadguru"
+                alt="Music concert"
               />
             </div>
             <div class="member-info">
@@ -229,9 +165,9 @@
           <div class="member">
             <div class="member-img">
               <img
-                src="Images/events/adiyogi.webp"
+                src="images/events/adiyogi.webp"
                 class="img-fluid"
-                alt="Sadguru"
+                alt="Adi Yogi"
               />
             </div>
             <div class="member-info">
@@ -248,9 +184,9 @@
         <div class="col-6 d-flex flex-column rudraksh justify-content-evenly">
           <div class="rudraksha-logo">
             <img
-              src="Images/Rudraksha-diksha-logo.webp"
+              src="images/events/rudraksha.webp"
               class="img-fluid border-bottom pb-3"
-              alt=""
+              alt="Rudraksha"
             />
           </div>
           <div class="article text-center text-white mt-4">
@@ -259,20 +195,20 @@
               Mahashivratri, are being offered to all for free. Bring home the
               Grace of Shiva.
             </p>
-            <p>
-              Receive energized Rudraksha at home for
-              <span style="font-weight: bolder; color: orange"> FREE </span>
+            <p id="free">
+              Receive energized Rudraksha at home for free
+
             </p>
           </div>
         </div>
         <div class="col-6 d-flex flex-column rudraksh justify-content-evenly">
           <div class="music-concert-logo">
             <img
-              src="Images/Yaskha-final.jpg"
+              src="images/events/yashka.jpg"
               class="img-fluid"
               width="300px"
               height="300px"
-              alt=""
+              alt="Yashka Music Band"
             />
           </div>
           <div class="article text-center text-white mt-4">
@@ -286,18 +222,20 @@
       </div>
     </div>
 
-    <!-- Sponsor section  -->
+    <!-- dont modify predefined css. -->
 
     <article class="container-fluid bg-light">
-      <h2 class="text-center display-3">Our Sponsors</h2>
+      <div class="d-flex flex-row justify-content-center">
+        <h2 class="mx-3">Our Sponsors</h2>
+      </div>
       <div class="row pb-5">
         <div class="col-lg-3 d-flex justify-content-center">
           <div class="sponsor">
             <div class="sponsor-img">
               <img
-                src="Images/sponsor/Axis-Bank.webp"
+                src="images/sponsor/axis bank.webp"
                 class="img-fluid"
-                alt="Sadguru"
+                alt="Axis Bank"
               />
             </div>
             <hr class="border-bottom-0" />
@@ -307,9 +245,9 @@
           <div class="sponsor">
             <div class="sponsor-img">
               <img
-                src="Images/sponsor/Earth-Sense.webp"
+                src="images/sponsor/earth sense.webp"
                 class="img-fluid"
-                alt="Sadguru"
+                alt="earth sense"
               />
             </div>
             <hr class="border-bottom-0" />
@@ -319,9 +257,9 @@
           <div class="sponsor">
             <div class="sponsor-img">
               <img
-                src="Images/sponsor/Group-394.webp"
+                src="images/sponsor/shriram.webp"
                 class="img-fluid"
-                alt="Sadguru"
+                alt="shriram"
               />
             </div>
             <hr class="border-bottom-0" />
@@ -331,9 +269,9 @@
           <div class="sponsor-last">
             <div class="sponsor-img">
               <img
-                src="Images/sponsor/Isha-Life.webp"
+                src="images/sponsor/isha life.webp"
                 class="img-fluid"
-                alt="Sadguru"
+                alt="Isha Life"
               />
             </div>
             <hr class="border-bottom-0" />
@@ -344,9 +282,9 @@
           <div class="sponsor">
             <div class="sponsor-img">
               <img
-                src="Images/sponsor/Apollo.webp"
+                src="images/sponsor/apollo.webp"
                 class="img-fluid"
-                alt="Sadguru"
+                alt="Apollo"
               />
             </div>
             <hr class="border-bottom-0" />
@@ -356,10 +294,10 @@
           <div class="sponsor">
             <div class="sponsor-img">
               <img
-                src="Images/sponsor/Tube-Investments.png"
+                src="images/sponsor/tube inverstment.png"
                 class="img-fluid"
                 width="200px"
-                alt="Sadguru"
+                alt="Tune Investment"
               />
             </div>
             <hr class="border-bottom-0" />
@@ -369,9 +307,9 @@
           <div class="sponsor">
             <div class="sponsor-img">
               <img
-                src="Images/sponsor/Induslnd-bank.png"
+                src="images/sponsor/induslnd bank.png"
                 class="img-fluid"
-                alt="Sadguru"
+                alt="Induslnd Bank"
               />
             </div>
             <hr class="border-bottom-0" />
@@ -381,9 +319,9 @@
           <div class="sponsor-last">
             <div class="sponsor-img">
               <img
-                src="Images/sponsor/IDFC.png"
+                src="images/sponsor/idfc bank.png"
                 class="img-fluid"
-                alt="Sadguru"
+                alt="IDFC bank"
               />
             </div>
             <hr class="border-bottom-0" />
@@ -391,18 +329,18 @@
         </div>
       </div>
     </article>
-    <div class="container-fluid" style="background: rgba(191, 74, 1, 0.81)">
+    <div class="container-fluid testimonialContainer">
       <div class="row">
         <div class="col-md-8 col-center m-auto">
-          <h2 class="testimonial-heading">
-            experience of famous Personalities
-          </h2>
-          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="d-flex flex-row justify-content-center">
+            <h2 class="mx-3">Experiences Of Famour Personalities</h2>
+          </div>
+          <div id="myCarousel" class="carousel slide carouselCustom" data-bs-ride="carousel">
             <!-- Carousel -->
             <div class="carousel-inner">
               <div class="item carousel-item active">
                 <div class="img-box">
-                  <img src="Images/testimonial/kangana.webp" alt="" />
+                  <img src="images/testimonial/kangana.webp" alt="" />
                 </div>
                 <p class="testimonial">
                   she quotes, "I still recall a quote from Sadhguru, 'You want
@@ -415,7 +353,7 @@
               </div>
               <div class="item carousel-item">
                 <div class="img-box">
-                  <img src="Images/testimonial/sonu.png" alt="" />
+                  <img src="images/testimonial/sonu.png" alt="" />
                 </div>
                 <p class="testimonial">
                   Feels so powerful and positive with Isha Maha Shivratri
@@ -425,7 +363,7 @@
               </div>
               <div class="item carousel-item">
                 <div class="img-box">
-                  <img src="Images/testimonial/anoopam kher.webp" alt="" />
+                  <img src="images/testimonial/anoopam kher.webp" alt="" />
                 </div>
                 <p class="testimonial">
                   It is an experience to be felt in this lifetime. I believe
@@ -458,8 +396,8 @@
     </div>
     <footer class="container-fluid">
       <div class="container">
-        <div class="heading text-center text-white">
-          <h1 class="text-capitalize p-2">venue</h1>
+        <div class="heading d-flex flex-row justify-content-center">
+          <h2 class="mx-3">Venue</h2>
         </div>
         <div class="address text-white text-center">
           <address>
@@ -469,14 +407,15 @@
         </div>
         <div class="final-section">
           <h4 class="text-center text-white">Dont miss the event</h4>
-          <button
-            type="button"
-            class="btn btn-danger mt-3 p-1 w-auto"
-            data-bs-toggle="modal"
-            data-bs-target="#formModal"
-          >
-            Register Now
-          </button>
+          <div class="row justify-content-center">
+            <button
+              type="button"
+              data-modal-target="#signUpModal"
+              id="signUp"
+              class="btn btn-danger btn-lg"
+            >
+              Register Now
+            </button>
         </div>
       </div>
     </footer>
@@ -485,11 +424,13 @@
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
       crossorigin="anonymous"
-    ></script>
+    >
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
       integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
+    <script src="js/script.js"></script>
   </body>
 </html>
